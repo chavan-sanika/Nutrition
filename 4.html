@@ -1,0 +1,241 @@
+<html>
+ <head>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+  <link rel="stylesheet" href="style1.css">
+<link href="style2.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+</head>
+<style>
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+.round {
+  border-radius: 50%;
+}
+
+button{
+  padding: 2px;
+  border-radius: 10%;
+  margin: 10px;
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <img src="./images/10.jfif" alt="LOGO" style="height: 70px; width:70px; padding-left:20px; border-radius:50%;">
+  
+    <a href="FAQ.html">FAQ </a>
+    <a href="4.html">How Healthy are you?</a>
+     <a href="3.html">Balance Nutrition</a>
+    <a href="index.html">About Us</a>
+    
+  
+  </div>
+
+  <h3><b>B</b>ody <b>M</b>ass <b>I</b>ndex Calculator</h3>
+  <div>
+<form class="form" id="form" onsubmit="return validateForm()">
+<div class="row-one">
+  <input type="text" class="text-input" id="age" autocomplete="off" required/><p class="text">Age</p>
+  <label class="container">
+  <input type="radio" name="radio" id="f"><p class="text">Female</p>
+    <span class="checkmark"></span>
+  </label>
+  <label class="container">
+  <input type="radio" name="radio" id="m"><p class="text">Male</p>
+    <span class="checkmark"></span>
+  </label>
+  </div>
+
+<div class="row-two">
+  <input type="text" class="text-input" id="height" autocomplete="off" required><p class="text">Height (cm)</p>
+  <input type="text" class="text-input" id="weight" autocomplete="off" required><p class="text">Weight (kg)</p>
+</div>
+<button type="button" id="submit">Submit</button>
+
+</form>
+<script src="4BMI.js"></script>
+</div>
+
+<center>
+  <h1>Check You Diet As per You BMI</h1>
+  <div>
+<button>  <a href="#underweight"><h6>underweight</h6></a></button>
+ <button> <a href="#healthy"><h6>healthy</h6></a></button>
+<button>  <a href="#obses"><h6>obese</h6></a></button>
+<button>  <a href="#extrem"><h6>extrem obese</h6></a></button>
+<br>
+
+<div id="underweight" class="toggle" style="display:none">
+  <table style="width:60%">
+    <tr>
+      <th>Time</th>
+      <th>Meal</th>
+    </tr>
+    <tr>
+      <td>8:00 AM</td>
+      <td>2 moong dal chilla (paneer stuffing optional), 1 cup curd, handful of nuts</td>
+    </tr>
+    <tr>
+      <td>10:30 AM</td>
+      <td>Fruit smoothie</td>
+    </tr>
+    <tr>
+      <td>12:30 PM</td>
+      <td> 1 cup dal, 2 chapatis, ½ cup rice, 1 cup curd, 1 cup salad</td>
+    </tr>
+    <tr>
+      <td>04:00 PM</td>
+      <td>1 bowl tomato soup, 1 cup aloo chat</td>
+    </tr>
+    <tr>
+      <td>06:30 PM</td>
+      <td> 2 bananas</td>
+    </tr>
+    <tr>
+      <td>08:30 PM</td>
+      <td> 2 bananas</td>
+    </tr>
+  </table>
+</div>
+
+
+<div id="healthy" class="toggle" style="display:none">
+  <h4>Follow Your Regular Routing</h4>
+<img src="./images/11.webp" alt="Congradulations">
+
+</div>
+
+
+<div id="obses" class="toggle" style="display:none">
+  <table style="width:60%">
+    <tr>
+      <th>Time</th>
+      <th>Meal</th>
+    </tr>
+    <tr>
+      <td>8:00 AM</td>
+      <td>1 medium size apple</td>
+    </tr>
+    <tr>
+      <td>10:30 AM</td>
+      <td>Sliced muskmelon (1/2 bowl)</td>
+    </tr>
+    <tr>
+      <td>12:30 PM</td>
+      <td>Watermelon (1 bowl)</td>
+    </tr>
+    <tr>
+      <td>04:00 PM</td>
+      <td>1 big Mosambi or Orange</td>
+    </tr>
+    <tr>
+      <td>06:30 PM</td>
+      <td>Pomegranate salad with 1 cup of muskmelon</td>
+    </tr>
+    <tr>
+      <td>08:30 PM</td>
+      <td>½ cup watermelon</td>
+    </tr>
+  </table>
+</div>
+
+
+<div id="extrem" class="toggle" style="display:none">
+  <table style="width:60%">
+    <tr>
+      <th>Time</th>
+      <th>Meal</th>
+    </tr>
+    <tr>
+      <td>8:00 AM</td>
+      <td>Cucumber Detox Water (1 glass)</td>
+    </tr>
+    <tr>
+      <td>10:30 AM</td>
+      <td>Mixed Nuts (25 grams)</td>
+    </tr>
+    <tr>
+      <td>12:30 PM</td>
+      <td>	Dal(1 katori)Gajar Matar Sabzi (1 katori)
+            Roti (1 roti/chapati)</td>
+    </tr>
+    <tr>
+      <td>04:00 PM</td>
+      <td>Cut Fruits (1 cup) Buttermilk (1 glass)</td>
+    </tr>
+    <tr>
+      <td>06:30 PM</td>
+      <td>Mixed Vegetable Salad (1 katori)</td>
+    </tr>
+    <tr>
+      <td>08:30 PM</td>
+      <td>Dal (1 katori) Lauki Sabzi (1 katori)
+         Roti (1 roti/chapati)</td>
+    </tr>
+  </table>
+</div>
+
+<br><br>
+  </div>
+  
+
+
+<br>
+</table></center>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+
+<!--JQuery code for one,round,multicity button-->
+
+<script>
+
+$("button a").click(function(e){
+    e.preventDefault();
+    $(".toggle").hide();
+    var toShow = $(this).attr('href');
+    $(toShow).show();
+});
+</script>
+
+
+</body>
+</html>

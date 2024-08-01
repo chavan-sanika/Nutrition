@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <Link rel="stylesheet" href="style1.css">
+    <title>FAQ</title>
+    <style>
+        body{
+            background-color:white;
+        }
+        .layout{
+            width: 600px;
+            margin: auto;
+        }
+        .accordion{
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: orange;
+            border-radius: 10px;
+        }
+        .accordion__question p{
+            margin: 5px;
+            padding: 0;
+            font-family: Verdana;
+            font-size: 20px;
+        }
+        .accordion__answer p{
+            margin: 5px;
+            padding: 10px;
+            font-size: large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+            background: white;
+            border-radius: 10px; 
+        }
+        .accordion:hover{
+            cursor: pointer;
+        }
+        .accordion__answer {
+            display: none;
+        } 
+        .accordion.active .accordion__answer {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <img src="./images/10.jfif" alt="LOGO" style="height: 70px; width:70px; padding-left:20px; border-radius:50%;">
+  
+        <a href="FAQ.html">FAQ </a>
+        <a href="4.html">How Healthy are you?</a>
+         <a href="3.html">Balance Nutrition</a>
+        <a href="index.html">About Us</a>
+        
+      
+      </div>
+
+    <h1 style="color:blue; text-align:center">Some Common Questions ?</h1>
+    <div class="layout">
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>How do I go from overweight to healthy weight?</p>
+
+            </div>
+            <div class="accordion__answer">
+                <p>5 Ways to Reach a Healthy Weight<br>
+1.Skip the sugary drinks<br>
+2.Exercise<br>
+3.Reduce screen time<br>
+4.Watch portion sizes<br>
+5.Eat 5 servings of fruits and veggies a day. Fruits and veggies are about more than just vitamins and minerals.<br></p>
+
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>Do I Need to Eat Breakfast?</p>
+
+            </div>
+            <div class="accordion__answer">
+                <p>
+                    Those who eat breakfast tend to eat less throughout the day, and studies have shown that breakfast improves cognitive performance, especially in school-age children. Skipping breakfast may leave you feeling tired and hungry, which can lead to poor dietary choices.
+                </p>
+
+            </div>
+        </div>
+	<div class="accordion">
+            <div class="accordion__question">
+                <p>How Many Fruits and Vegetables Should I Eat?</p>
+
+            </div>
+            <div class="accordion__answer">
+                <p>Taj Men and women between the ages of 19 and 50 should aim for 2-1/2 to 3 cups of veggies per day and 1-1/2 to 2 cups of fruit.</p>
+
+            </div>
+	</div>
+	<div class="accordion">
+            <div class="accordion__question">
+                <p>How Much Protein Should I Eat?</p>
+
+            </div>
+            <div class="accordion__answer">
+                <p>Adults need a minimum of .8 grams of protein per kilogram of body weight per day, or a little more than 7 grams of protein per 20 pounds of body weight. Athletes and those who exercise regularly will need more. Protein is found throughout the body, and is critical for cell and organ function, as well as repairing and rebuilding muscle tissue after exercise.</p>
+
+            </div>
+	</div>
+	<div class="accordion">
+            <div class="accordion__question">
+                <p>What exercises reduce BMI?
+</p>
+
+            </div>
+            <div class="accordion__answer">
+                <p>
+Weight Loss: Best Exercises To Lower BMICycling<br>
+1)Brisk walking<br>
+2)Running<br>
+3)Weight training<br>
+4)HIIT<br>
+5)Swimming<br>
+6)Yoga.</p>
+
+            </div>
+	</div>
+	<div class="accordion">
+            <div class="accordion__question">
+                <p>What foods maintain good BP?</p>
+
+            </div>
+            <div class="accordion__answer">
+                <p>1)Eating plenty of fruits, vegetables, and whole grains.<br>
+2)Limiting sugar-sweetened beverages and desserts.<br>
+3)Limiting foods high in saturated fat.<br>
+4)Consuming fat-free or low-fat dairy products.<br>
+5)Eating fish, poultry, beans, nuts, and vegetable oils.<br></p>
+
+            </div>
+	</div>
+    </div>
+
+    <script>
+        let answers=document.querySelectorAll(".accordion");
+        answers.forEach((event)=>{
+            event.addEventListener('click',()=>{
+                if(event.classList.contains("active")){
+                    event.classList.remove("active");
+                }
+                else{
+                    event.classList.add("active");
+                }
+            })
+        })
+    </script>
+
+
+</body>
+
+</html>
